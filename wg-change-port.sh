@@ -68,8 +68,8 @@ change_wireguard_port() {
   read -p "Enter the desired WireGuard port (leave blank for random): " NEW_PORT_INPUT
 
   if [[ -z $NEW_PORT_INPUT ]]; then
-    # Generate a random port between 1024 and 65535
-    NEW_PORT=$(shuf -i 1024-65535 -n 1)
+    # Generate a random port between 50000 and 65535
+    NEW_PORT=$(shuf -i 50000-65535 -n 1)
     echo "Generated random port: $NEW_PORT"
   else
     # Use the user-provided port
